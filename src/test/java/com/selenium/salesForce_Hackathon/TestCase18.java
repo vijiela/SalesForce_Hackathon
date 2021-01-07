@@ -1,4 +1,7 @@
 package com.selenium.salesForce_Hackathon;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 //TC-18 Test Stuck Opportunities Report
 import org.openqa.selenium.By;
 
@@ -12,8 +15,12 @@ public class TestCase18 extends SalesForceUtility{
 		goToSalesForceUrl();
 		loginToSalesForcePortal();
 		driver.findElement(By.linkText("Opportunities")).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_ESCAPE);
+		r.keyRelease(KeyEvent.VK_ESCAPE);
 		driver.findElement(By.linkText("Stuck Opportunities")).click();
+		quitBrowser();
 
 	}
 

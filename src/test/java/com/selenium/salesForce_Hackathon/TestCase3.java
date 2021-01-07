@@ -23,6 +23,7 @@ public class TestCase3 extends SalesForceUtility {
 		driver.findElement(By.id("Login")).click();
 		
 		driver.findElement(By.xpath("//a[contains(text(),'Logout')]")).click();
+		quitBrowser();
 
 	}
 

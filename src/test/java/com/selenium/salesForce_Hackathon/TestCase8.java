@@ -16,7 +16,7 @@ public class TestCase8 extends SalesForceUtility {
 		driver.findElement(By.id("userNavButton")).click();
 		waitExplicitly(5, driver.findElement(By.xpath("//a[contains(text(),'Developer Console')]")));
 		driver.findElement(By.xpath("//a[contains(text(),'Developer Console')]")).click();
-
+		quitBrowser();
 	}
 
 }

@@ -1,10 +1,14 @@
 package com.selenium.salesForce_Hackathon;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 //TC-34 Verify the edited lastname is updated at various places
 import org.openqa.selenium.By;
 
 import com.selenium.salesForce_Utility.SalesForceUtility;
 
-public class TestCase34 extends SalesForceUtility{
+public class TestCase34 extends SalesForceUtility {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
@@ -13,8 +17,11 @@ public class TestCase34 extends SalesForceUtility{
 		loginToSalesForcePortal();
 		driver.findElement(By.linkText("Home")).click();
 		Thread.sleep(5000);
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_ESCAPE);
+		r.keyRelease(KeyEvent.VK_ESCAPE);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//a[@href='/_ui/core/userprofile/UserProfilePage'])[3]")).click();
-		
 
 		waitExplicitly(10, driver.findElement(By.xpath("//img[@alt='Edit Profile']")));
 
@@ -30,6 +37,7 @@ public class TestCase34 extends SalesForceUtility{
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@type='button']")).click();
 		driver.switchTo().defaultContent();
+		quitBrowser();
 	}
 
 }

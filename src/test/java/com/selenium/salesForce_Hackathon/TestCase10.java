@@ -1,4 +1,7 @@
 package com.selenium.salesForce_Hackathon;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
@@ -14,6 +17,10 @@ public class TestCase10 extends SalesForceUtility{
 		loginToSalesForcePortal();
 		waitExplicitly(5,driver.findElement(By.id("Account_Tab")));
 		driver.findElement(By.id("Account_Tab")).click();
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_ESCAPE);
+		r.keyRelease(KeyEvent.VK_ESCAPE);
+		
 		Thread.sleep(5000);
 		waitExplicitly(10, driver.findElement(By.xpath("(//input[@class='btn'])[3]")));
 		driver.findElement(By.xpath("(//input[@class='btn'])[3]")).click();
@@ -28,7 +35,7 @@ public class TestCase10 extends SalesForceUtility{
 		Select se1 = new Select(driver.findElement(By.id("00N4x00000DejRg")));
 		se1.selectByValue("High");
 		driver.findElement(By.xpath("(//input[@name='save'])[2]")).click();
-		
+		quitBrowser();
 	}
 
 }

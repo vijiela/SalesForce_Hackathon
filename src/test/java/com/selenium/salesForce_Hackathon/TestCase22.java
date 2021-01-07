@@ -1,5 +1,8 @@
 package com.selenium.salesForce_Hackathon;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 //TC-22defaultView Functionality of the Go Button
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
@@ -16,6 +19,9 @@ public class TestCase22 extends SalesForceUtility{
 		loginToSalesForcePortal();
 		driver.findElement(By.xpath("//a[contains(text(),'Leads')]")).click();
 		Thread.sleep(5000);
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_ESCAPE);
+		r.keyRelease(KeyEvent.VK_ESCAPE);
 		waitExplicitly(5,driver.findElement(By.id("fcf")));
 		Select se = new Select(driver.findElement(By.id("fcf")));
 		
@@ -29,6 +35,7 @@ public class TestCase22 extends SalesForceUtility{
 		Thread.sleep(5000);
 		waitExplicitly(5,driver.findElement(By.id("fcf")));
 		driver.findElement(By.xpath("//input[@name='go']")).click();
+		quitBrowser();
 		
 		//driver.findElement(By.id("fcf")).click();
 	}

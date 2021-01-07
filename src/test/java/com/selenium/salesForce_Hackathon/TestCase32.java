@@ -5,10 +5,9 @@ import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 
-//TC-25 Create new contact
 import com.selenium.salesForce_Utility.SalesForceUtility;
 
-public class TestCase25 extends SalesForceUtility {
+public class TestCase32 extends SalesForceUtility{
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
@@ -22,7 +21,7 @@ public class TestCase25 extends SalesForceUtility {
 		r.keyRelease(KeyEvent.VK_ESCAPE);
 		driver.findElement(By.xpath("(//input[@class='btn'])[3]")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.id("name_lastcon2")).sendKeys("Naga");
+		driver.findElement(By.id("name_lastcon2")).sendKeys("Indian");
 		Thread.sleep(5000);
 		
 		waitExplicitly(5, driver.findElement(By.cssSelector("a#con4_lkwgt>img")));
@@ -35,8 +34,10 @@ public class TestCase25 extends SalesForceUtility {
 		driver.findElement(By.xpath("(//th[contains(text(),'Automation')])[1]")).click();
 		Thread.sleep(5000);
 		driver.switchTo().defaultContent();
-		driver.findElement(By.xpath("//input[@name='save']")).click();
+		driver.findElement(By.xpath("//input[@name='save_new']")).click();
 		quitBrowser();
+
+
 
 	}
 

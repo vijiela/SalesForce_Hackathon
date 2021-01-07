@@ -20,7 +20,7 @@ public class TestCase4B extends SalesForceUtility{
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("22131");
 			driver.findElement(By.id("Login")).click();
-			
+			quitBrowser();
 	}
 
 }

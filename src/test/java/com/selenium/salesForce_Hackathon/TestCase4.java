@@ -15,6 +15,7 @@ public class TestCase4 extends SalesForceUtility {
 		driver.findElement(By.id("forgot_password_link")).click();
 		driver.findElement(By.id("un")).sendKeys("vijiela@abc.com");
 		driver.findElement(By.id("continue")).click();
+		quitBrowser();
 	}
 
 }

@@ -42,5 +42,9 @@ public class SalesForceUtility {
 		
 
 	}
+public static void quitBrowser() {
+		
+		driver.quit();
+	}
 
 }

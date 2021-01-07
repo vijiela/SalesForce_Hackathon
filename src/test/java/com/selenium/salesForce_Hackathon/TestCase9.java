@@ -14,6 +14,7 @@ public class TestCase9 extends SalesForceUtility {
 		waitExplicitly(5, driver.findElement(By.id("userNavButton")));
 		driver.findElement(By.id("userNavButton")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Logout')]")).click();
+		quitBrowser();
 	}
 
 }

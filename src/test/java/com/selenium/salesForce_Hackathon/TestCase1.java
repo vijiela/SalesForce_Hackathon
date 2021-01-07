@@ -19,7 +19,7 @@ public class TestCase1 extends SalesForceUtility {
 		ele.sendKeys("vijiela@abc.com");
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("Login")).click();
-
+		quitBrowser();
 	}
 
 }

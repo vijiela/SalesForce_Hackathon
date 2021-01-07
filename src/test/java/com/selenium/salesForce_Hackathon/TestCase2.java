@@ -10,6 +10,7 @@ public class TestCase2 extends SalesForceUtility {
 		launchBrowse();
 		goToSalesForceUrl();
 		loginToSalesForcePortal();
+		quitBrowser();
 	}
 
 }

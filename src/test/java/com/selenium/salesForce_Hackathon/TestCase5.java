@@ -13,6 +13,7 @@ public class TestCase5 extends SalesForceUtility{
 		goToSalesForceUrl();
 		loginToSalesForcePortal();
 		driver.findElement(By.id("userNavButton")).click();
+		quitBrowser();
 	}
 
 }
